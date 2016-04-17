@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="sruby.github.io.intenttest2"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="io.github.sruby.permission.aty.CompentPermissionAty"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="io.github.sruby.intenttest2.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="io.github.sruby.intenttest2.Baty3"
+            android:label="@string/title_activity_baty3"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="io.github.sruby.intent.action"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="app"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.github.sruby.aidl.AIDLAty"
+            android:label="@string/title_activity_aidlaty"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="io.github.sruby.permission.aty.CallOtherAppAty"
+            android:label="@string/title_activity_call_other_app_aty"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

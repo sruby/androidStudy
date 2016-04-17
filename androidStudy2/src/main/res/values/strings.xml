@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IntentTest2</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_baty3">Baty3</string>
+    <string name="title_activity_aidlaty">AIDLAty</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_call_other_app_aty">CallOtherAppAty</string>
+</resources>

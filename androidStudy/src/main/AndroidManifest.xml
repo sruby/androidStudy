@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="io.github.sruby.androidStudy"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 权限的声明,与类中常量保持一致 -->
+    <permission android:name="io.github.sruby.permission.aty.permission.PermissionTest"/>
+    <permission android:name="io.github.sruby.permission.aty.CompentPermissionAty"/>
+
+    <!-- 授权自定义权限的 -->
+    <uses-permission android:name="io.github.sruby.permission.aty.permission.PermissionTest"/>
+
+    <!-- 授权应用访问网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name="io.github.sruby.applicationTest.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="io.github.sruby.permission.aty.CompentPermissionAty"
+            android:label="@string/title_activity_compent_permission_aty"
+            android:permission="io.github.sruby.permission.aty.CompentPermissionAty"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="io.github.sruby.permission.aty.intent.action.CompentPermissionAty"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.github.sruby.permission.aty.CheckPermissionAty"
+            android:label="@string/title_activity_check_permission_aty"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="io.github.sruby.permission.aty.WebViewAty"
+            android:label="@string/title_activity_web_view_aty"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="io.github.sruby.logger.aty.LoggerAty"
+            android:label="@string/title_activity_logger_aty"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="io.github.sruby.broadCR.aty.bcrAty"
+            android:label="@string/title_activity_bcr_aty"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="io.github.sruby.intenttest1.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="io.github.sruby.intenttest1.Baty1"
+            android:label="@string/title_activity_baty1"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="io.github.sruby.intenttest1.Baty2"
+            android:label="@string/title_activity_baty2"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="io.github.sruby.intenttest1.LocalLaunchAty"
+            android:label="@string/title_activity_local_launch_aty"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="io.github.sruby.intenttest1.ContextTest"
+            android:label="@string/title_activity_context_test"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="io.github.sruby.applicationTest.Main1"
+            android:label="main1"/>
+        <activity
+            android:name="io.github.sruby.applicationTest.Main2"
+            android:label="main2"/>
+        <activity
+            android:name="io.github.sruby.applicationTest.MainNew1"
+            android:label="@string/title_activity_main_new1"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="io.github.sruby.applicationTest.MainNew2"
+            android:label="@string/title_activity_main_new2"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="io.github.sruby.ServiceTest.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <service
+            android:name="io.github.sruby.ServiceTest.MyService"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="io.github.sruby.aidl.AidlService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <!--
+        注释此接收器,使用动态注册和注销
+        <receiver
+            android:name="io.github.sruby.broadCR.broadcr.BroadCRTest"
+            android:enabled="true"
+            android:exported="true"></receiver>
+        -->
+        <receiver
+            android:name="io.github.sruby.broadCR.broadcr.BroadCRTest"
+            android:enabled="true"
+            android:exported="true">
+
+            <!-- priority设置广播接收器的权重,数值越大,权重越高 -->
+            <intent-filter android:priority="2">
+                <action android:name="io.github.sruby.broadCR.broadcr.intent.BroadCRTest"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="io.github.sruby.broadCR.broadcr.BroadCRTest2"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="io.github.sruby.broadCR.broadcr.intent.BroadCRTest"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="io.github.sruby.fragment.UsedFragmentAty"
+            android:label="@string/title_activity_used_fragment_aty"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

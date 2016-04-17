@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/androidStudy.iml" filepath="$PROJECT_DIR$/androidStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidStudy/androidStudy-androidStudy.iml" filepath="$PROJECT_DIR$/androidStudy/androidStudy-androidStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidStudy2/androidStudy2.iml" filepath="$PROJECT_DIR$/androidStudy2/androidStudy2.iml" />
+    </modules>
+  </component>
+</project>
